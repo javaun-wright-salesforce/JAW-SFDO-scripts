@@ -1,21 +1,20 @@
 #!/usr/local/bin/python3
-import os
-import re
-import argparse
-# import cumulusci.core.dependencies.dependencies
+import yaml
+import urllib.request
+import pprint
 
-CUMULUS_file = 'cumulus.yml'
 # Read/Wrrite managed and unmanaged packages in cumulus.yml file.
 
-def get_cumulus_pkg(): # return a dictionary with package information
+test_yml = "https://raw.githubusercontent.com/GeekStewie/universities/master/test.yml"
+
+def get_yml_pkg(yml_url): # return a dictionary with package information from a url
+    captured_yml =  urllib.request.urlopen(yml_url)
     '''Capture package section in cumulus.yml'''
-    with open(CUMULUS_file, 'r') as f:
-        print(f)
+    return yaml.safe_load(captured_yml)
+    
 
-
-
-
-
+raw_yml = get_yml_pkg(test_yml)
+pprint.pprint(raw_yml)
 # Notes section:
 
 ## Topics to review 
@@ -35,3 +34,9 @@ def get_cumulus_pkg(): # return a dictionary with package information
 #
 # - How can I check for dependencies?
 # -- The update_dependencies task 
+
+
+## Resources:
+# test yml: https://raw.githubusercontent.com/GeekStewie/universities/master/test.yml
+# urllib module: https://www.geeksforgeeks.org/python-urllib-module/
+# Python YAML: https://pyyaml.org/wiki/PyYAMLDocumentation

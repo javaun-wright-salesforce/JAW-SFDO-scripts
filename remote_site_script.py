@@ -46,6 +46,7 @@ xml_file_path = "{}/{}".format(deploy_directory_path, xml_file)
 create_deploy_directory(deploy_directory_path, xml_file_path, xml_data)
 
 
+# Add this flow to CumulusCI
 
 # flows:
     # deploy_remote_site:

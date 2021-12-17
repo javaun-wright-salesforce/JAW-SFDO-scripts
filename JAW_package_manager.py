@@ -52,8 +52,3 @@ pprint.pprint(cumulus_data)
 #
 # - How can I check for dependencies?
 # -- The update_dependencies task
-
-## Resources:
-# test yml: https://raw.githubusercontent.com/GeekStewie/universities/master/test.yml
-# urllib module: https://www.geeksforgeeks.org/python-urllib-module/
-# Python YAML: https://pyyaml.org/wiki/PyYAMLDocumentation

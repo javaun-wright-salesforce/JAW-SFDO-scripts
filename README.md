@@ -12,3 +12,10 @@ The script removes extra step for SE’s after they install certain packs or add
 
 This support NxDO builds which need to to set this when orgs are built or whenever a MIDO pack has a lightning component that runs in Experience Cloud or externally. Since the IDO “hosts” the component, so we need to be able to set it.
 
+
+Package manager script:
+
+This program writes a remote package dependency into the projects Cumulusci file. Provide using a url 
+
+Run command:
+./JAW_package_manager.py --url <Github URL>
